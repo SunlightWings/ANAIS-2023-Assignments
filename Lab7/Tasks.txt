@@ -1,0 +1,11 @@
+Task 1: GDL Blueprint
+Task 2: Graph definition
+****[Part 1] Implementing GCN and GAT****
+Task 3: Implement GNN
+Task 4: Adjacencies!
+[OPTIONAL] Graph Attention Network (GAT)
+[OPTIONAL] Task 5: Implement GAT
+Task 6: Relationships between normalizations
+****[Part 2] Use PyTorch geometric****
+Task 7 (Bonus): Implement GCN in Pytorch Geometric
+Task 8 (Bonus): Graph Classification
