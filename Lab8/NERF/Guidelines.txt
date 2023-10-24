@@ -1,0 +1,7 @@
+website: https://www.matthewtancik.com/nerf
+full code: https://colab.research.google.com/drive/github.com/bmild/nerf
+
+Step 1: Feature Extraction
+Step 2: Feature Matching
+Step 3: Visual Odometry
+Step 4: Visualization
