@@ -1,0 +1,5 @@
+This is a simplied version of the method presented in NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis. 
+1. Load Input Images and Poses 
+2. Optimize NeRF 
+3. Interactive Visualization 
+4. Render 360 Video
