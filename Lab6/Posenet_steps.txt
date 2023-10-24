@@ -1,0 +1,5 @@
+I. Camera localization - PoseNet Training
+II. Camera localization - Rotational and Translational errors
+III. Camera localization - Outliers analysis
+IV. Camera localization - Robustness to noise
+V. Camera localization - Test on unseen images
