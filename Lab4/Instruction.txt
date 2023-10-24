@@ -1,0 +1,7 @@
+Original Article: https://huggingface.co/blog/sentiment-analysis-python
+
+1. Install huggingface libraries
+2. Use Pre-trained Sentiment Analysis Models
+3. Building Your Own Sentiment Analysis Model
+4. Analyze new data with the model
+5. Try writing your own training loop
