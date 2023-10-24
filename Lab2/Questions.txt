@@ -1,0 +1,7 @@
+Exercise 1
+1. Classify items of clothing present in FashionMNIST dataset.
+2. Increase the number of linear layers(Neural Network class) in the model and check model performance
+3. Change the activation functions and note the difference in performance
+
+Exercise 2
+1. Build a model classify digits of the MNIST dataset.
