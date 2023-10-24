@@ -1,0 +1,51 @@
+The objective of this lab is to empower students to implement Mixup and Cutoff data augmentation techniques and analyze their effects through visualization. By engaging in this hands-on experience, students will develop the skills to effectively apply these techniques to their datasets, observe the transformations induced by Mixup and Cutoff, and understand how these augmentations contribute.
+
+
+Task 1: Implement Cutout Augmentation
+Algorithm: Cutout Augmentation
+Inputs:
+  img: Input image tensor
+  n_holes: Number of cutout holes to apply
+  length: Length of each cutout hole
+Output:
+  Augmented image tensor
+Procedure:
+1. Get the height (h) and width (w) of the input image tensor.
+2. Create a mask tensor of size (h, w) filled with ones of data type float32.
+3. Repeat the following steps for each cutout hole (n) from 1 to n_holes:
+    a) Generate random coordinates (y, x) within the image dimensions (h, w).
+    b) Calculate the boundaries of the cutout hole based on the length:
+      y1 = max(y - length // 2, 0)
+      y2 = min(y + length // 2, h)
+      x1 = max(x - length // 2, 0)
+      x2 = min(x + length // 2, w)
+    c) Set the corresponding region in the mask tensor to 0, indicating the cutout hole
+4.Convert the mask tensor to a PyTorch tensor.
+5. Expand the mask tensor to match the size of the input image tensor.
+6. Multiply the input image tensor element-wise with the mask tensor to apply the cutout holes.
+7. Return the augmented image tensor.
+
+
+Task 2: Implement Mixup Augmentation
+Algorithm: Mixup Data
+Inputs:
+  x: Input data tensor
+  y: Target labels tensor
+  alpha: Alpha parameter for mixup (default: 1.0)
+Outputs:
+  mixed_x: Mixed input data tensor
+  y_a: First set of target labels tensor
+  y_b: Second set of target labels tensor
+  lam: Lambda value for mixing
+Procedure:
+  1. If alpha > 0, generate a random lambda value (lam) by sampling from a Beta distribution with alpha as both shape parameters. Otherwise, set lam = 1.
+  2. Get the batch size from the input data tensor x.
+  3. Generate a random permutation of indices using torch.randperm(batch_size).
+  4. Calculate the mixed input data (mixed_x) by linearly combining the input data x and its permuted counterpart, according to the lambda value: mixed_x = lam * x + (1 - lam) * x[index, :]
+  5. Set y_a to be the original target labels tensor y.
+  6.  Set y_b to be the permuted target labels tensor y[index].
+  7. Return mixed_x, y_a, y_b, and lam as the output.
+
+
+Task 3: Training on different Augmentation
+Train on 3 different augmentation mode and visualize the results from below.You can change the hyper-parameters such as alpha, n_holes, etc to see the effect of augmentation techinque. Value of Flags to set for different Augmentation Technque
