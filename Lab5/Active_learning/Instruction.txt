@@ -1,0 +1,23 @@
+The objective of the active learning lab is to enable students to implement the active learning method, specifically focusing on the margin of confidence technique. Through hands-on exercises and practical applications, students will learn to apply the margin of confidence method effectively
+
+Active Learning Framework
+1. Initialize data pool with labeled and unlabeled subsets.
+2. Train a model on the labeled subset.
+3. Iterate:
+      Use the model to predict on the unlabeled data.
+      Calculate uncertainty for each unlabeled sample.
+      Select the most uncertain samples.
+      Label selected samples.
+      Add labeled samples to the labeled subset.
+      Retrain the model.
+4. Evaluate model performance.
+5. Repeat steps 3-4 until a stopping criterion is met or budget is exhausted.
+6. Train a final model using all labeled data.
+7. Deploy the final model for inference.
+
+Task 1: Implement Margin of Confidence Method
+Implement Margin of Confidence Method using following guideline in given loop below.
+1. Calculate Probabilities
+2. Get top two Probabilities
+3. Calculate difference between top two probabilities
+4. Calculate uncertainity = 1 - difference
